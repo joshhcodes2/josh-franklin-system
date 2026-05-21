@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Josh Franklin's cinematic futuristic portfolio experience built as a living AI interface."
+    />
+    <meta name="author" content="Josh Franklin" />
+    <meta name="theme-color" content="#020409" />
+    <title>Josh Franklin | Cinematic AI Interface Portfolio</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="preloader" aria-live="polite">
+      <div class="preloader__orb" aria-hidden="true">
+        <span class="preloader__ring preloader__ring--outer"></span>
+        <span class="preloader__ring preloader__ring--middle"></span>
+        <span class="preloader__ring preloader__ring--inner"></span>
+        <span class="preloader__beam"></span>
+        <span class="preloader__core"></span>
+      </div>
+      <div class="preloader__content">
+        <p class="eyebrow">Initializing Josh Franklin system</p>
+        <strong id="load-count">00</strong>
+        <div class="preloader__bar" aria-hidden="true"><span></span></div>
+        <div class="preloader__boot" aria-hidden="true">
+          <span>WebGL core linked</span>
+          <span>Signal craft calibrated</span>
+          <span>Cinematic interface online</span>
+        </div>
+        <span class="preloader__signature">Designed by Josh Franklin</span>
+      </div>
+    </div>
+
+    <canvas id="universe" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+    <aside class="director-interface" aria-hidden="true">
+      <div class="director-interface__top">
+        <span id="chapter-readout">00 / AI Core Hero Experience</span>
+        <strong>Designed by Josh Franklin</strong>
+      </div>
+      <div class="director-interface__progress">
+        <span id="scroll-progress"></span>
+      </div>
+      <div class="director-interface__bottom">
+        <span>Signal</span>
+        <span id="velocity-readout">00.00</span>
+      </div>
+    </aside>
+
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand magnetic" href="#hero" aria-label="Return to Josh Franklin AI core">
+        JOSH FRANKLIN
+      </a>
+      <nav>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#projects">Projects</a>
+        <a href="#lab">Lab</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="sound magnetic" type="button" aria-label="Toggle ambient interface">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="smooth">
+      <section class="chapter hero" id="hero" data-world="0">
+        <div class="hero__system">
+          <span>BY JOSH FRANKLIN</span>
+          <span>NEURAL LINK STABLE</span>
+          <span>PORTFOLIO 2026</span>
+        </div>
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Josh Franklin / futuristic developer / cinematic interface designer</p>
+          <h1 class="mega reveal">
+            Josh Franklin builds digital cinema for brands that refuse ordinary.
+          </h1>
+          <div class="hero__meta reveal">
+            <p>
+              An elite portfolio transmission authored by Josh Franklin: WebGL systems,
+              motion language, luxury interfaces, and impossible-feeling product stories.
+            </p>
+            <a class="cta magnetic" href="#projects">Enter the showcase</a>
+          </div>
+        </div>
+        <a class="enter-pill magnetic" href="#manifesto" aria-label="Scroll to enter the Josh Franklin transmission">
+          <span></span>
+          Scroll to initiate Josh Franklin transmission
+        </a>
+        <div class="hud-panel hero__panel">
+          <span>CREATOR SIGNATURE</span>
+          <strong>JF</strong>
+          <small>Josh Franklin cinematic system online</small>
+        </div>
+        <div class="creator-mark" aria-hidden="true">
+          <span>Designed by</span>
+          <strong>Josh Franklin</strong>
+        </div>
+      </section>
+
+      <section class="chapter manifesto" id="manifesto" data-world="1">
+        <div class="chapter__index">01 / Digital Manifesto</div>
+        <div class="manifesto__statement reveal">
+          Interfaces should not sit on screens. They should open like portals, breathe like
+          environments, and make technology feel inevitable.
+        </div>
+        <div class="manifesto__grid">
+          <p class="reveal">
+            I am Josh Franklin. I design systems where atmosphere, performance, and storytelling become one
+            continuous signal. Every scroll is directed. Every hover has weight. Every
+            frame earns the visitor's attention.
+          </p>
+          <div class="metric reveal">
+            <strong>3.0s</strong>
+            <span>opening hook engineered for clips, shares, and instant memory</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter story-engine" id="story-engine" data-world="2">
+        <div class="chapter__index">02 / Franklin Story Engine</div>
+        <div class="story-engine__copy">
+          <p class="eyebrow reveal">Every portfolio needs proof. This one behaves like a film.</p>
+          <h2 class="reveal">
+            Josh Franklin turns code into atmosphere, atmosphere into attention,
+            and attention into trust.
+          </h2>
+        </div>
+        <div class="story-engine__field reveal" aria-hidden="true">
+          <span>Light</span>
+          <span>Motion</span>
+          <span>Depth</span>
+          <span>Signal</span>
+          <span>Memory</span>
+        </div>
+      </section>
+
+      <section class="chapter identity" id="identity" data-world="3">
+        <div class="chapter__index">03 / Interactive Identity System</div>
+        <div class="identity__stack">
+          <h2 class="reveal">Luxury restraint. Sci-fi intelligence. Motion with gravity.</h2>
+          <div class="signal-board reveal">
+            <span>MONOCHROME</span>
+            <span>ELECTRIC BLUE</span>
+            <span>SOFT SILVER</span>
+            <span>DEEP BLACK</span>
+          </div>
+        </div>
+        <div class="orbital-copy reveal">
+          The Josh Franklin identity behaves like a premium operating system: quiet by default, reactive
+          when approached, cinematic when the story demands impact.
+        </div>
+      </section>
+
+      <section class="chapter skills" id="skills" data-world="4">
+        <div class="chapter__index">04 / Experimental Skills Universe</div>
+        <div class="skill-cloud" aria-label="Skills">
+          <span>Three.js</span>
+          <span>GLSL</span>
+          <span>React</span>
+          <span>Motion Systems</span>
+          <span>Creative Direction</span>
+          <span>Product UX</span>
+          <span>AI Interfaces</span>
+          <span>Design Systems</span>
+          <span>Performance</span>
+        </div>
+        <h2 class="reveal">Josh Franklin thinks in scenes, systems, and sensation.</h2>
+      </section>
+
+      <section class="chapter projects" id="projects" data-world="5">
+        <div class="chapter__index">05 / Cinematic Projects Showcase</div>
+        <div class="showcase-console reveal" aria-label="Josh Franklin cinematic project console">
+          <div class="showcase-console__header">
+            <span>JOSH FRANKLIN SELECTED TRANSMISSIONS</span>
+            <strong id="case-code">CASE 001</strong>
+          </div>
+          <div class="showcase-preview" aria-hidden="true">
+            <div class="preview-orbit"></div>
+            <div class="preview-core"></div>
+            <div class="preview-scan"></div>
+            <div class="preview-readout">
+              <span id="preview-type">Predictive Commerce</span>
+              <strong id="preview-score">98.7</strong>
+            </div>
+          </div>
+          <div class="project-stage">
+            <button class="project is-active" type="button" data-case="0">
+              <span>Case 001 / Josh Franklin</span>
+              <h2>Neural Commerce OS</h2>
+              <p>
+                A commerce interface rebuilt as a predictive command surface with realtime
+                product intelligence and cinematic buyer journeys.
+              </p>
+              <em>Conversion architecture / WebGL atmosphere / premium product UX</em>
+            </button>
+            <button class="project" type="button" data-case="1">
+              <span>Case 002 / Josh Franklin</span>
+              <h2>Vision Studio</h2>
+              <p>
+                A creative platform prototype blending spatial UI, procedural art direction,
+                and high-performance browser rendering.
+              </p>
+              <em>Spatial canvas / shader identity / creator workflow</em>
+            </button>
+            <button class="project" type="button" data-case="2">
+              <span>Case 003 / Josh Franklin</span>
+              <h2>Signal Finance</h2>
+              <p>
+                A premium analytics cockpit with layered market atmospherics, kinetic
+                typography, and executive-grade decision flows.
+              </p>
+              <em>Executive dashboards / cinematic data / decision systems</em>
+            </button>
+          </div>
+          <div class="case-timeline" aria-hidden="true">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter case-study" id="case-study" data-world="6">
+        <div class="chapter__index">06 / Interactive Case Study Experience</div>
+        <div class="case-frame reveal">
+          <div class="case-frame__screen">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="case-interface">
+              <div class="case-interface__top">
+                <strong>Josh Franklin Method</strong>
+                <em>Live Case System</em>
+              </div>
+              <div class="case-interface__grid">
+                <div>
+                  <small>01</small>
+                  <b>Strategy</b>
+                  <p>Define the emotional signal and premium audience intent.</p>
+                </div>
+                <div>
+                  <small>02</small>
+                  <b>Interface</b>
+                  <p>Shape the story into cinematic structure, layout, and motion.</p>
+                </div>
+                <div>
+                  <small>03</small>
+                  <b>WebGL</b>
+                  <p>Build the living visual system with performance-first rendering.</p>
+                </div>
+              </div>
+              <div class="case-interface__metric">
+                <span>Attention Index</span>
+                <strong>99.4</strong>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2>From product brief to cinematic system.</h2>
+            <p>
+              Josh Franklin turns strategy into information architecture. Architecture becomes motion.
+              Motion becomes a brand memory people can replay.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter lab" id="lab" data-world="7">
+        <div class="chapter__index">07 / Innovation Laboratory</div>
+        <div class="lab__matrix">
+          <div class="lab__node reveal">
+            <strong>01</strong>
+            <span>Realtime shader atmospheres</span>
+          </div>
+          <div class="lab__node reveal">
+            <strong>02</strong>
+            <span>Generative interface choreography</span>
+          </div>
+          <div class="lab__node reveal">
+            <strong>03</strong>
+            <span>AI-assisted product storytelling</span>
+          </div>
+          <div class="lab__node reveal">
+            <strong>04</strong>
+            <span>Performance-first visual systems</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter motion" id="motion" data-world="8">
+        <div class="chapter__index">08 / Motion Graphics Experience</div>
+        <h2 class="reveal">Motion is the invisible luxury layer.</h2>
+        <p class="reveal">
+          The site uses slow interpolation, environmental drift, magnetic responses, and
+          scroll-based scene evolution so the interface feels directed instead of decorated.
+        </p>
+      </section>
+
+      <section class="chapter recognition" id="recognition" data-world="9">
+        <div class="chapter__index">09 / Recognition & Social Proof</div>
+        <div class="quotes">
+          <blockquote class="reveal">"This does not feel like a portfolio. It feels like a launch event."</blockquote>
+          <blockquote class="reveal">"The interaction design makes the work feel years ahead."</blockquote>
+          <blockquote class="reveal">"A premium digital universe with actual product thinking underneath."</blockquote>
+        </div>
+      </section>
+
+      <section class="chapter faq" id="faq" data-world="10">
+        <div class="chapter__index">10 / Interface FAQ</div>
+        <details class="reveal" open>
+          <summary>What do you build?</summary>
+          <p>High-end websites, immersive product launches, WebGL experiences, AI interfaces, and flagship portfolio systems.</p>
+        </details>
+        <details class="reveal">
+          <summary>Who is this for?</summary>
+          <p>Founders, studios, creators, and premium teams who want a digital presence people remember.</p>
+        </details>
+        <details class="reveal">
+          <summary>How does a project start?</summary>
+          <p>With a compact discovery sprint: positioning, visual direction, interaction thesis, and a technical prototype.</p>
+        </details>
+      </section>
+
+      <section class="chapter contact" id="contact" data-world="11">
+        <div class="chapter__index">11 / Futuristic Contact Portal</div>
+        <h2 class="reveal">Open a transmission to Josh Franklin.</h2>
+        <p class="reveal">
+          Premium builds, cinematic interfaces, impossible launches, and digital worlds
+          that make people stop scrolling.
+        </p>
+        <a class="portal magnetic" href="mailto:joshuaafranklin1234@gmail.com">joshuaafranklin1234@gmail.com</a>
+        <div class="ending" aria-hidden="true">DESIGNED BY JOSH FRANKLIN / END SEQUENCE / BEGIN SIGNAL</div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
